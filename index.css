@@ -1,0 +1,140 @@
+
+     /* Style the header */
+/* Style the header */
+header {
+    background-color: #f504d5f9;
+    padding: 10px 0;
+    
+}
+
+/* Use Flexbox for positioning */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px; /* Adjust width */
+    margin: 0 auto; /* Center align */
+    padding: 0 20px;
+    height: 150px;
+}
+
+.logo {
+    left: 20px;
+    position: absolute;
+}
+
+/* Logo on the left */
+.logo img {
+    max-height: 140px; /* Adjust logo size */
+    width: auto;
+}
+
+/* Center title */
+.site-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    flex-grow: 1; /* Allows it to center */
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-style: italic;
+    padding: 5px 10px;
+    font-family: cursive;
+}
+
+.nav-links a:hover {
+    color: rgba(14, 242, 33, 0.925);
+}
+
+ .heaven {
+     display: block;
+     max-width: 100%;
+     height: auto;
+     margin: 0 auto;
+
+ }
+
+
+
+ .overlay-text {
+     position: absolute;
+     top: 75%;
+     /* Center vertically */
+     left: 52%;
+     /* Center horizontally */
+     transform: translate(-50%, -50%);
+     /* Align exactly center */
+
+     color: white;
+     /* Text color */
+     padding: 15px 20px;
+     font-size: 24px;
+     font-weight: bold;
+     text-align: center;
+     border-radius: 10px;
+ }
+
+ .issh {
+     text-align: center;
+     padding-top: 50px;
+     font-size: 30px;
+ }
+
+ .qt4 {
+    text-align: center;
+ }
+
+ .bss {
+     text-align: center;
+     font-size: 30px;
+ }
+
+ section {
+     background-color: #f98af9e2;
+     margin-top: -25px;
+ }
+
+ footer {
+     background: #eb04c8db;
+     color: white;
+     text-align: center;
+     padding: 10px;
+     margin-top: -24px;
+     font-size: 22px;
+ }
+
+ .social-links {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links:hover {
+    color: #E4405F; /* Instagram's official color */
+}
+
+
+
+
+ 

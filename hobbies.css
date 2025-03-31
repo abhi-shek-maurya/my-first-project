@@ -1,0 +1,166 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+header {
+    background-color: #f504d5f9;
+    padding: 10px 0;
+    
+}
+
+/* Use Flexbox for positioning */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px; /* Adjust width */
+    margin: 0 auto; /* Center align */
+    padding: 0 20px;
+    height: 150px;
+}
+
+.logo {
+    left: 20px;
+    position: absolute;
+}
+
+/* Logo on the left */
+.logo img {
+    max-height: 140px; /* Adjust logo size */
+    width: auto;
+}
+
+/* Center title */
+.site-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    flex-grow: 1; /* Allows it to center */
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-style: italic;
+    padding: 5px 10px;
+    font-family: cursive;
+}
+
+.nav-links a:hover {
+    color: rgba(14, 242, 33, 0.925);
+}
+
+.qt7 {
+    text-align: center;
+    margin: 50px;
+    border: 10px solid pink;
+}
+
+.hobby-box {
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    padding: 3rem;
+    background: #fff0f6;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hobby-box h2 {
+    color: #d63384;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .hobby-frame {
+    background: #ffe6f0;
+    border: 3px dashed #ff99cc;
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(255, 192, 203, 0.4);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hobby-frame p {
+    font-size: 1.3rem;
+    color: #444;
+    margin: 0.5rem 0;
+    transition: transform 0.2s ease;
+  }
+  
+  .hobby-frame p:hover {
+    transform: scale(1.05);
+  }
+  
+  .last-line {
+    font-style: italic;
+    font-weight: bold;
+    color: #c2185b;
+    margin-top: 1rem;
+  }
+  
+  .sparkles {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    font-size: 1.5rem;
+    animation: sparkleMove 6s linear infinite;
+    opacity: 0.7;
+    z-index: 0;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
+  @keyframes sparkleMove {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+   .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .content {
+    flex: 1;
+  }
+  
+  
+
+footer {
+    background: #eb04c8db;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 0;
+    font-size: 22px;
+}
+

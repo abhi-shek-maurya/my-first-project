@@ -1,0 +1,238 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* .content {
+    position: relative;
+    padding: 50px 20px;
+    min-height: 80vh;
+    z-index: 1;
+  }
+  
+  .content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('baby.png');
+    background-repeat: repeat;
+    background-size: 300px auto;
+    opacity: 1.5; 
+    z-index: -1;
+  } */
+  
+
+.content {
+    background-image: url('baby.png');
+    background-repeat: repeat;
+    background-size: 300px auto;
+    padding: 50px 20px;
+    min-height: 80vh;
+
+}
+
+
+header {
+    background-color: #f504d5f9;
+    padding: 10px 0;
+
+}
+
+/* Use Flexbox for positioning */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    /* Adjust width */
+    margin: 0 auto;
+    /* Center align */
+    padding: 0 20px;
+    height: 150px;
+}
+
+.logo {
+    left: 20px;
+    position: absolute;
+}
+
+/* Logo on the left */
+.logo img {
+    max-height: 140px;
+    /* Adjust logo size */
+    width: auto;
+}
+
+/* Center title */
+.site-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    flex-grow: 1;
+    /* Allows it to center */
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-style: italic;
+    padding: 5px 10px;
+    font-family: cursive;
+}
+
+.nav-links a:hover {
+    color: rgba(14, 242, 33, 0.925);
+}
+
+/* Foodie Background Section */
+.foodie-background {
+    background: rgba(255, 248, 252, 0.9);
+    border: 6px double #ffb6c1;
+    border-radius: 30px;
+    padding: 50px 30px;
+    margin: 30px auto;
+    box-shadow: 0 0 25px rgba(255, 182, 193, 0.5);
+    max-width: 1100px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating emojis */
+.foodie-background::before,
+.foodie-background::after {
+    content: "🍭🍓🍦";
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.2;
+    animation: float 6s ease-in-out infinite;
+}
+
+.foodie-background::before {
+    top: -20px;
+    left: -30px;
+}
+
+.foodie-background::after {
+    bottom: -20px;
+    right: -30px;
+}
+
+/* Floating animation */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Food Title */
+.food-title {
+    font-size: 2rem;
+    color: #ff1493;
+    text-align: center;
+    margin-bottom: 35px;
+    font-family: 'Comic Sans MS', cursive;
+    animation: bounce 2.5s infinite;
+}
+
+/* Bounce effect */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Food Box */
+.food-box {
+    background-color: #fff0f5;
+    border-radius: 25px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 4px dashed #ffaad4;
+    box-shadow: inset 0 0 10px rgba(255, 105, 180, 0.2);
+}
+
+/* Food List */
+.food-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.4rem;
+    color: rgb(132, 23, 121);
+    line-height: 2.2;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+/* Emoji bullets */
+.food-list li::before {
+    content: "🍴 ";
+    margin-right: 5px;
+}
+
+.food-list li:hover {
+transform: translateX(5px);
+color: #ff1493;
+font-weight: bold;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .foodie-background {
+        padding: 30px 20px;
+    }
+
+    .food-title {
+        font-size: 1.5rem;
+    }
+
+    .food-list {
+        font-size: 1rem;
+    }
+}
+
+footer {
+    background: #eb04c8db;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: -24px;
+    font-size: 22px;
+}
