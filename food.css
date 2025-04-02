@@ -1,110 +1,115 @@
-html,
-body {
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-image: url('baby.png'); /* Replace with your image */
+    background-repeat: repeat; /* Repeats the image */
+    background-size: 200px;
+    background-position: center;
 }
 
-/* .content {
+/* Exclude header and footer */
+header, footer {
+    background: #eb04c8db; /* Your existing background color */
     position: relative;
-    padding: 50px 20px;
-    min-height: 80vh;
-    z-index: 1;
+    z-index: 4;
+}
+
+  
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+    font-family: Arial, sans-serif;
+    background-color: #fff;
   }
   
-  .content::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('baby.png');
-    background-repeat: repeat;
-    background-size: 300px auto;
-    opacity: 1.5; 
-    z-index: -1;
-  } */
-  
-
-.content {
-    background-image: url('baby.png');
-    background-repeat: repeat;
-    background-size: 300px auto;
-    padding: 50px 20px;
-    min-height: 80vh;
-
-}
-
-
-header {
+  /* Header */
+  header {
     background-color: #f504d5f9;
-    padding: 10px 0;
-
-}
-
-/* Use Flexbox for positioning */
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    /* Adjust width */
-    margin: 0 auto;
-    /* Center align */
-    padding: 0 20px;
-    height: 150px;
-}
-
-.logo {
-    left: 20px;
+    width: 100%;
+    padding: 15px 0;
+    height: 100px;
+    position: relative;
+  }
+  
+  /* Logo */
+  .logo {
     position: absolute;
-}
-
-/* Logo on the left */
-.logo img {
-    max-height: 140px;
-    /* Adjust logo size */
-    width: auto;
-}
-
-/* Center title */
-.site-title {
-    font-size: 50px;
+    left: 10px;
+    top: 10px;
+  }
+  
+  .logo img {
+    max-width: 80px;
+    height: auto;
+  }
+  
+  /* Title */
+  .site-title {
+    font-size: 24px;
     font-weight: bold;
     color: white;
+    position: relative;
     text-align: center;
-    flex-grow: 1;
-    /* Allows it to center */
-}
-
-/* Navigation links */
-.nav-links {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    right: 20px;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-}
-
-.nav-links li {
-    display: inline-block;
-}
-
-.nav-links a {
-    text-decoration: none;
+    margin: 10px 0;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  /* Hamburger icon */
+  .hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 15px;
+    display: block;
+    background: #f504d5f9;
     color: white;
-    font-size: 25px;
-    font-style: italic;
-    padding: 5px 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+    border-bottom-left-radius: 10px;
+  }
+  
+  /* Side nav */
+  .side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    background-color: #f504d5f9;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 60px;
     font-family: cursive;
-}
-
-.nav-links a:hover {
-    color: rgba(14, 242, 33, 0.925);
-}
+  }
+  
+  .side-nav a {
+    padding: 10px 25px;
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .side-nav a:hover {
+    background-color: #ff9ff3;
+  }
+  
+  .side-nav .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 30px;
+    color: white;
+  }
 
 /* Foodie Background Section */
 .foodie-background {
@@ -112,44 +117,16 @@ nav {
     border: 6px double #ffb6c1;
     border-radius: 30px;
     padding: 50px 30px;
-    margin: 30px auto;
+    margin: 80px auto;
     box-shadow: 0 0 25px rgba(255, 182, 193, 0.5);
-    max-width: 1100px;
+    max-width: 500px;
     position: relative;
     overflow: hidden;
-}
-
-/* Floating emojis */
-.foodie-background::before,
-.foodie-background::after {
-    content: "🍭🍓🍦";
-    position: absolute;
-    font-size: 2rem;
-    opacity: 0.2;
-    animation: float 6s ease-in-out infinite;
-}
-
-.foodie-background::before {
-    top: -20px;
-    left: -30px;
-}
-
-.foodie-background::after {
-    bottom: -20px;
-    right: -30px;
-}
-
-/* Floating animation */
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
 }
 
 /* Food Title */
@@ -208,31 +185,54 @@ color: #ff1493;
 font-weight: bold;
 }
 
+
+footer {
+    background: #eb04c8db;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    height: 4em;
+    font-size: 16px;
+  }
+
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-5px); }
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+
+    .site-title {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  
+    /* Navigation */
+    .hamburger {
+      font-size: 26px;
+      padding: 10px;
+    }
+  
+    .side-nav a {
+      font-size: 18px;
+      padding: 8px;
+    }
+
     .foodie-background {
-        padding: 30px 20px;
-    }
+      padding: 30px 20px;
+      margin: 80px 20px;
+  }
 
-    .food-title {
-        font-size: 1.5rem;
-    }
+  .food-title {
+      font-size: 1.5rem;
+  }
 
-    .food-list {
-        font-size: 1rem;
-    }
-}
+  .food-list {
+      font-size: 1rem;
+  }
 
-footer {
-    background: #eb04c8db;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: -24px;
-    font-size: 22px;
-}
+    footer {
+        font-size: 14px;
+      }
+    }

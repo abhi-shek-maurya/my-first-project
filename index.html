@@ -12,23 +12,24 @@
 
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <img src="logo.png" alt="Aalu Kachalu Logo">
-            </div>
-            <h1 class="site-title">Aalu Kachalu.Com</h1>
-            <ul class="nav-links">
-                <li><a href="index.html">My World</a></li>
-                <li><a href="hobbies.html">My Hobbies</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="food.html">Foodie Me</a></li>
-            </ul>
-        </nav>
+        <div class="hamburger" onclick="toggleNav()">&#9776;</div>
+        <div class="logo">
+            <img src="logo.png" alt="Aalu Kachalu Logo">
+        </div>
+        <h1 class="site-title">Aalu Kachalu.Com</h1>
+        <div id="sideNav" class="side-nav">
+            <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+            <a href="index.html">My World</a>
+            <a href="hobbies.html">My Hobbies</a>
+            <a href="about.html">About Me</a>
+            <a href="food.html">Foodie Me</a>
+        </div>
+
     </header>
 
 
 
-    <div>
+    <div class="container">
         <img src="heaven.png" alt="Background Image" class="heaven">
         <div class="overlay-text">
             <h1>Welcome to my ittu sa world...🤗🥰</h1>
@@ -46,9 +47,7 @@
         <h2>
             <p>Aur haan!!! &nbsp kyon aaye ho yahan haan... kya jaanna h mere baare me haan!!😒</p>
             <p> Main to ek sidhi saadhi, bholi bhaali, nanhi si gudiya hoon na🪆.</p>
-            <p>Aur
-                haan... par
-                shaitan v😏. Toh jyada hoshiyari nhi mere saamne😾.</p>
+            <p>Aur haan... par shaitan v😏. Toh jyada hoshiyari nhi mere saamne😾.</p>
             <p>.</p>
             <p>.</p>
             <p>.</p>
@@ -83,6 +82,26 @@
     <footer>
         <p>&copy; 2025 It's my world Huhhh. All rights reserved.</p>
     </footer>
+    <script>
+        function toggleNav() {
+            const nav = document.getElementById("sideNav");
+            if (nav.style.width === "200px") {
+                nav.style.width = "0";
+            } else {
+                nav.style.width = "200px";
+            }
+        }
+        document.addEventListener("click", function (event) {
+            const nav = document.getElementById("sideNav");
+            const hamburger = document.querySelector(".hamburger");
+
+            if (nav.style.width === "200px" && !nav.contains(event.target) && !hamburger.contains(event.target)) {
+                nav.style.width = "0";
+            }
+        });
+
+    </script>
+
 </body>
 
 </html>

@@ -9,24 +9,23 @@
 </head>
 
 <body>
-    <div class="page-container">
-        <header>
-            <nav>
-                <div class="logo">
-                    <img src="logo.png" alt="Aalu Kachalu Logo">
-                </div>
-                <h1 class="site-title">Aalu Kachalu.Com</h1>
-                <ul class="nav-links">
-                    <li><a href="index.html">My World</a></li>
-                    <li><a href="hobbies.html">My Hobbies</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="food.html">Foodie Me</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main class="content">
-            <section class="foodie-background">
-                <h2 class="food-title">🍉🍼🧁 Mujhe kya kya psnd h khaane-peene me?🤔🤔 🍔🍼🍓</h2>
+    <header>
+        <div class="hamburger" onclick="toggleNav()">&#9776;</div>
+        <div class="logo">
+            <img src="logo.png" alt="Aalu Kachalu Logo">
+        </div>
+        <h1 class="site-title">Aalu Kachalu.Com</h1>
+        <div id="sideNav" class="side-nav">
+            <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+            <a href="index.html">My World</a>
+            <a href="hobbies.html">My Hobbies</a>
+            <a href="about.html">About Me</a>
+            <a href="food.html">Foodie Me</a>
+        </div>
+    </header>
+    <main class="content">
+        <section class="foodie-background">
+            <h2 class="food-title">🍉🍼🧁 Mujhe kya kya psnd h khaane-peene me?🤔🤔 🍔🍼🍓</h2>
             <div class="food-box">
                 <ul class="food-list">
                     <li>Momosssss🤤🤤</li>
@@ -46,20 +45,41 @@
                     <li>Maggi — meri 2-minute wali therapy🍜🧘‍♀️</li>
                     <li>Aur chaay☕🫤...wo to main bss biscuit khane ke liye peeti hun😏</li>
                     <li>Biscuit khatam...baat khatam...chaay fenk do😒</li>
+                    <li>Aur mujhe na wo bchchon wali slate-pencil nhi hoti!! wo bda psnd h yrr😋</li>
+                    <li>Aur kulhad-chaay wala kulhad chabana v😇</li>
                     <li>Aur haan...last but not the least🤭</li>
                     <li>Mujhe dudu peena na bht psnd wo v bottle me🍼😇</li>
                     <li>Roj main jb bed pe hoti hoon to sath me leke soti hoon🤗🍼</li>
                     <li>Nhi peeti hoon to ninni hi nhi aati🍼😴</li>
                 </ul>
             </div>
-            </section>
-        </main>
+        </section>
+    </main>
     </div>
 
     <footer>
         <p>&copy; 2025 It's my world Huhhh. All rights reserved.</p>
     </footer>
 
+    <script>
+        function toggleNav() {
+          const nav = document.getElementById("sideNav");
+          if (nav.style.width === "200px") {
+            nav.style.width = "0";
+          } else {
+            nav.style.width = "200px";
+          }
+        }
+        document.addEventListener("click", function (event) {
+          const nav = document.getElementById("sideNav");
+          const hamburger = document.querySelector(".hamburger");
+    
+          if (nav.style.width === "200px" && !nav.contains(event.target) && !hamburger.contains(event.target)) {
+            nav.style.width = "0";
+          }
+        });
+    
+      </script>
 </body>
 
 </html>

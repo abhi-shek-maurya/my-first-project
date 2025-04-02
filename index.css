@@ -1,140 +1,201 @@
-
-     /* Style the header */
-/* Style the header */
-header {
-    background-color: #f504d5f9;
-    padding: 10px 0;
-    
-}
-
-/* Use Flexbox for positioning */
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px; /* Adjust width */
-    margin: 0 auto; /* Center align */
-    padding: 0 20px;
-    height: 150px;
-}
-
-.logo {
-    left: 20px;
-    position: absolute;
-}
-
-/* Logo on the left */
-.logo img {
-    max-height: 140px; /* Adjust logo size */
-    width: auto;
-}
-
-/* Center title */
-.site-title {
-    font-size: 50px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    flex-grow: 1; /* Allows it to center */
-}
-
-/* Navigation links */
-.nav-links {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    right: 20px;
+/* Reset Styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+/* Header */
+header {
+    background-color: #f504d5f9;
+    width: 100%;
+    padding: 15px 0;
+    height: 100px;
+    position: relative;
+}
+
+/* Logo */
+.logo {
     position: absolute;
+    left: 10px;
+    top: 10px;
 }
 
-.nav-links li {
-    display: inline-block;
+.logo img {
+    max-width: 80px;
+    height: auto;
 }
 
-.nav-links a {
-    text-decoration: none;
+/* Title */
+.site-title {
+    font-size: 24px;
+    font-weight: bold;
     color: white;
-    font-size: 25px;
-    font-style: italic;
-    padding: 5px 10px;
+    position: relative;
+    text-align: center;
+    margin: 10px 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Hamburger icon */
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 15px;
+    display: block;
+    background: #f504d5f9;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+    border-bottom-left-radius: 10px;
+}
+
+/* Side nav */
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    background-color: #f504d5f9;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 60px;
     font-family: cursive;
 }
 
-.nav-links a:hover {
-    color: rgba(14, 242, 33, 0.925);
+.side-nav a {
+    padding: 10px 25px;
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    display: block;
+    transition: 0.3s;
 }
 
- .heaven {
-     display: block;
-     max-width: 100%;
-     height: auto;
-     margin: 0 auto;
+.side-nav a:hover {
+    background-color: #ff9ff3;
+}
 
- }
-
-
-
- .overlay-text {
-     position: absolute;
-     top: 75%;
-     /* Center vertically */
-     left: 52%;
-     /* Center horizontally */
-     transform: translate(-50%, -50%);
-     /* Align exactly center */
-
-     color: white;
-     /* Text color */
-     padding: 15px 20px;
-     font-size: 24px;
-     font-weight: bold;
-     text-align: center;
-     border-radius: 10px;
- }
-
- .issh {
-     text-align: center;
-     padding-top: 50px;
-     font-size: 30px;
- }
-
- .qt4 {
-    text-align: center;
- }
-
- .bss {
-     text-align: center;
-     font-size: 30px;
- }
-
- section {
-     background-color: #f98af9e2;
-     margin-top: -25px;
- }
-
- footer {
-     background: #eb04c8db;
-     color: white;
-     text-align: center;
-     padding: 10px;
-     margin-top: -24px;
-     font-size: 22px;
- }
-
- .social-links {
+.side-nav .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 30px;
     color: white;
-    font-size: 24px;
+}
+
+/* Responsive Image */
+.heaven {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Overlay Text */
+.overlay-text {
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 5vw;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 90%;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%);
+}
+
+@media (min-width: 768px) {
+    .overlay-text {
+        font-size: 32px;
+    }
+}
+
+/* Content Sections */
+section {
+    background-color: #f98af9e2;
+    padding: 20px;
+    text-align: center;
+}
+
+.issh, .bss {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.qt4 img {
+    max-width: 90%;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: left;
+}
+
+/* Footer */
+footer {
+    background: #eb04c8db;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    height: 4em;
+    font-size: 16px;
+}
+
+/* Social Links */
+.social-links {
+    color: white;
+    font-size: 20px;
     margin: 0 10px;
     transition: color 0.3s ease;
 }
 
 .social-links:hover {
-    color: #E4405F; /* Instagram's official color */
+    color: #E4405F;
 }
 
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 20px;
+        margin-top: 20px;
+    }
 
+    /* Navigation */
+  .hamburger {
+    font-size: 26px;
+    padding: 10px;
+  }
 
+  .side-nav a {
+    font-size: 18px;
+    padding: 8px;
+  }
 
- 
+    .issh, .bss {
+        font-size: 18px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
