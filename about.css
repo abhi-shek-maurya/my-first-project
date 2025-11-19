@@ -143,6 +143,20 @@ header {
     transition: transform 0.3s ease;
 }
 
+.img-left video,
+.img-right video {
+    width: 100%;
+    max-width: 280px;
+    /* Adjusted for mobile */
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+    border: 4px solid #ffaad4;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.3);
+    transition: transform 0.3s ease;
+}
+
 /* Positioning for diagonal effect */
 .img-left {
     justify-self: start;
