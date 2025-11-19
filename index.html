@@ -11,12 +11,14 @@
 </head>
 
 <body>
+
     <header>
+
         <div class="hamburger" onclick="toggleNav()">&#9776;</div>
         <div class="logo">
             <img src="logo.png" alt="Aalu Kachalu Logo">
         </div>
-        <h1 class="site-title">Aalu Kachalu.Com</h1>
+        <h1 class="site-title"><span class="notranslate">Aalu Kachalu.Com</span></h1>
         <div id="sideNav" class="side-nav">
             <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
             <a href="index.html">My World</a>
@@ -26,8 +28,9 @@
         </div>
 
     </header>
-
-
+    <div class="translate-container">
+        <div id="google_translate_element"></div>
+    </div>
 
     <div class="container">
         <img src="heaven.png" alt="Background Image" class="heaven">
@@ -101,6 +104,18 @@
         });
 
     </script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'hi',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 
 </body>
 
