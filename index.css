@@ -148,6 +148,7 @@ header {
 @media (max-width: 768px) {
     .overlay-text {
         top: 10%;
+        font-size: 20px;
     }
 }
 
