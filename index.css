@@ -5,9 +5,11 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
     font-family: Arial, sans-serif;
     background-color: #fff;
 }
@@ -132,7 +134,7 @@ header {
     position: absolute;
     text-align: center;
     color: white;
-    font-size: 5vw;
+    font-size: 2vw;
     font-weight: bold;
     padding: 10px;
     border-radius: 8px;
@@ -143,9 +145,9 @@ header {
     transform: translate(-50%);
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .overlay-text {
-        font-size: 32px;
+        top: 10%;
     }
 }
 
@@ -156,7 +158,8 @@ section {
     text-align: center;
 }
 
-.issh, .bss {
+.issh,
+.bss {
     font-size: 20px;
     margin-bottom: 10px;
 }
@@ -200,17 +203,18 @@ footer {
     }
 
     /* Navigation */
-  .hamburger {
-    font-size: 26px;
-    padding: 10px;
-  }
+    .hamburger {
+        font-size: 26px;
+        padding: 10px;
+    }
 
-  .side-nav a {
-    font-size: 18px;
-    padding: 8px;
-  }
+    .side-nav a {
+        font-size: 18px;
+        padding: 8px;
+    }
 
-    .issh, .bss {
+    .issh,
+    .bss {
         font-size: 18px;
     }
 
